@@ -3,9 +3,12 @@
   <title>Please Sign In</title>
 </head>
 <body>
-  {% if message %}
+  <!-- 如果登录失败,显示这条消息--> 
+  {% if message %}  	
   <p style="color:red">{{ message }}</p>
   {% endif %}
+
+
   <form action="/signin" method="post">
     <legend>Please sign in:</legend>
     <p><input name="username" placeholder="Username" value="{{ username }}"></p>

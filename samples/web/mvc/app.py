@@ -18,8 +18,8 @@ def signin():
     username = request.form['username']
     password = request.form['password']
     if username=='admin' and password=='password':
-        return render_template('signin-ok.html', username=username)
-    return render_template('form.html', message='Bad username or password', username=username)
+        return render_template('signin-ok.html', username=username)     # 这里我们向signin-ok.html传递了一个它需要替换的参数
+    return render_template('form.html', message='Bad username or password', username=username)  # 这里也传递了一个
 
 if __name__ == '__main__':
     app.run()
